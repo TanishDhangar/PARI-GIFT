@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, My Love!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Background & Font Styling */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        /* Main Container */
+        .container {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 20px 30px;
+            border-radius: 15px;
+            max-width: 600px;
+            box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 2s;
+            overflow: hidden;
+            transition: opacity 0.5s ease;
+            z-index: 2; /* Ensures container is above hearts */
+        }
+
+        /* Keyframe for Fading In */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Banner Text */
+        .banner {
+            font-size: 2.5em;
+            font-family: 'Dancing Script', cursive;
+            color: #ff69b4;
+            margin-top: 20px;
+        }
+
+        /* Image Styling */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        .image {
+            width: 80%;
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            border: 5px solid #ff69b4;
+            transition: transform 0.3s;
+        }
+        .image:hover {
+            transform: scale(1.05);
+        }
+
+        /* Message Text */
+        .message {
+            font-size: 1.2em;
+            margin: 20px 0;
+            line-height: 1.6;
+            color: #5c5c5c;
+        }
+
+        /* Button Styling */
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            color: white;
+            background: #ff69b4;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #ff4392;
+            transform: translateY(-3px);
+        }
+
+        /* Fade-out Effect */
+        .fade-out {
+            opacity: 0;
+        }
+
+        /* Falling hearts animation */
+        .heart {
+            position: absolute;
+            color: rgba(255, 105, 180, 0.4); /* Faded light pink */
+            font-size: 1.5em;
+            animation: fall linear infinite;
+            opacity: 0.5;
+            z-index: 1; /* Below the main content */
+        }
+
+        /* Heart animation keyframes */
+        @keyframes fall {
+            0% {
+                transform: translateY(-100vh) scale(0.5);
+            }
+            100% {
+                transform: translateY(100vh) scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="mainContent">
+        <div class="banner">Happy Birthday, Chuhiya...! 🐹💖</div>
+        
+        <div class="message">
+            I wish I was with you right now. You are my first everything Pari,
+             Thank you for filling my life with endless love, and loads of Happiness. 
+            Chal ab photo pe click kar👇🏻..
+            
+        </div>
+        
+        <!-- Clickable Image -->
+        <div class="image-container">
+            <a href="new.html">
+                <img src="PARI.JPG" alt="Happy Birthday Image" class="image">
+            </a>
+        </div>
+
+        <!-- Make the button clickable to redirect to the unwrap surprise page -->
+        <a href="#" class="button" id="unwrapButton">Unwrap Your Surprise 🎁</a>
+    </div>
+
+    <!-- JavaScript for Falling Hearts and Button Redirect -->
+    <script>
+        // Falling heart creation function
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerText = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw'; // Random horizontal position
+            heart.style.animationDuration = Math.random() * 2 + 3 + 's'; // Random fall duration
+            heart.style.fontSize = Math.random() * 10 + 10 + 'px'; // Random size
+            document.body.appendChild(heart);
+
+            // Remove heart after animation ends
+            heart.addEventListener('animationend', () => {
+                heart.remove();
+            });
+        }
+
+        // Generate hearts at intervals
+        setInterval(createHeart, 500);
+
+        // Fade-out and redirect on button click
+        document.getElementById('unwrapButton').addEventListener('click', function(event) {
+            event.preventDefault();
+
+            const mainContent = document.getElementById('mainContent');
+            mainContent.classList.add('fade-out');
+
+            // Wait for fade-out transition to complete
+            setTimeout(() => {
+                window.location.href = 'Surprise.html';
+            }, 500); // Matches fade-out duration
+        });
+    </script>
+</body>
+</html>
