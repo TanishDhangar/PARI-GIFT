@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just for You</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Background & Font Styling */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(to bottom, #f9e8f0, #e4cce2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+            text-align: center;
+            overflow: hidden;
+            padding: 10px;
+            position: relative;
+        }
+
+        /* Main Container */
+        .container {
+            display: flex;
+            max-width: 90%;
+            width: 100%;
+            height: 80%;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            animation: fadeIn 2s;
+        }
+
+        /* Keyframe for Fading In */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Text Section Styling */
+        .text-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            background-color: #ffecf1;
+            color: #7d5ba6;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.3em;
+            box-shadow: inset -5px 0px 15px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        /* Message Text */
+        .message {
+            margin: 0 10px;
+            line-height: 1.6;
+            font-style: italic;
+            color: #5c5c5c;
+            font-size: 1.1em;
+        }
+
+        /* Image Section Styling */
+        .image-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            background-color: #f7e7f0;
+            border-left: 5px solid #ffb6c1;
+        }
+
+        .image-section img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Back Button Styling */
+        .back-button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff6b6b;
+            color: white;
+            padding: 10px 20px;
+            font-size: 0.9em;
+            font-family: 'Open Sans', sans-serif;
+            text-decoration: none;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #d9534f;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                height: auto;
+            }
+            .text-section, .image-section {
+                width: 100%;
+                height: 50vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Text Section -->
+        <div class="text-section">
+            <div class="message">
+                Dear small Pari,<br><br>
+                I am Tanny, you will meet me later in your life...(pls don't😕). I am sorry that I've 
+                hurt you, but I've also loved you more than anyone else, so yeah you can meet me.<p> Pari I remember you sending me this 
+                picture, it's so innocent and I am glad that I have it. 
+                I just wanna say, This little child 
+                would be so proud of her future self, that she have come so far, living in an unknown city
+                away from family, from home. Managing everything on her own, crying on small things but getting
+                back stronger every time. I am proud of you.
+                I really adore this photo of yours.
+                I have said this earlier, and I'll say it again, I want my daughter to have your eyes... </p>
+                <br>
+                Yaha pe anklet ka photo daal rha hoon, voh bass anklet nahi tha, tere nazuk se 
+                pair me voh cham-cham✨ karta hua anklet dekhke, dil ko sukoon milta tha. Anyways,
+                tu necklace ka photo bhej voh daal denge yaha pe.
+            </div>
+        </div>
+
+        <!-- Image Section with Actual Image Path -->
+        <div class="image-section">
+            <img src="ANKLET.jpg" alt="Anklet Photo">
+        </div>
+    </div>
+
+    <!-- Back Button -->
+    <a href="Surprise.html" class="back-button">Back to Surprise</a>
+</body>
+</html>
