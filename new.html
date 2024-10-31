@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You, My Love</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Background & Font Styling */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(to bottom, #f0e6ff, #d3c0e0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+            text-align: center;
+            padding: 10px;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Falling Hearts Styling */
+        .heart {
+            position: absolute;
+            top: -10vh;
+            font-size: 20px;
+            color: rgba(125, 91, 166, 0.6);
+            animation: fall 5s linear infinite;
+            opacity: 0.8;
+        }
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+        
+        /* Vary heart animation speed and position */
+        .heart:nth-child(odd) {
+            animation-duration: 7s;
+        }
+        .heart:nth-child(even) {
+            animation-duration: 5s;
+            animation-delay: 2s;
+        }
+
+        /* Main Container */
+        .container {
+            position: relative;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 20px;
+            border-radius: 15px;
+            max-width: 90%;
+            width: 100%;
+            box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 2s;
+            overflow-wrap: break-word;
+            z-index: 2; /* Ensures hearts stay in background */
+        }
+
+        /* Keyframe for Fading In */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Banner Text */
+        .banner {
+            font-size: 2em;
+            font-family: 'Dancing Script', cursive;
+            color: #7d5ba6;
+            margin-top: 10px;
+            line-height: 1.2;
+        }
+
+        /* Message Text */
+        .message {
+            font-size: 1em;
+            margin: 15px 0;
+            line-height: 1.6;
+            color: #5b5b5b;
+            font-style: italic;
+            text-align: left;
+            padding: 10px;
+            overflow-wrap: break-word;
+        }
+
+        /* Photo of You Two */
+        .photo-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .photo {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            margin-top: 10px;
+            transition: transform 0.3s;
+            border: 5px solid #7d5ba6;
+        }
+        .photo:hover {
+            transform: scale(1.05);
+        }
+
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            padding: 8px 16px;
+            margin-top: 20px;
+            color: white;
+            background: #7d5ba6;
+            text-decoration: none;
+            font-size: 0.9em;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .back-button:hover {
+            background-color: #64408a;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Falling Hearts -->
+    <div class="heart" style="left: 10%; animation-delay: 0s;">💜</div>
+    <div class="heart" style="left: 25%; animation-delay: 1s;">💜</div>
+    <div class="heart" style="left: 40%; animation-delay: 2s;">💜</div>
+    <div class="heart" style="left: 55%; animation-delay: 3s;">💜</div>
+    <div class="heart" style="left: 70%; animation-delay: 4s;">💜</div>
+    <div class="heart" style="left: 85%; animation-delay: 5s;">💜</div>
+
+    <!-- Main Content Container -->
+    <div class="container">
+        <div class="banner">Some Words, Straight from My Heart.. 💜</div>
+
+        <div class="message">
+            My dearest Hamster,<br><br>
+            Pari you little Charbi ka Gola, making this was so difficult, I literally have no photos.
+            How did you even think I would ever use our photos for something wrong.
+            I just didn't want to delete photos that night but my anger portrayed me so wrong. I was scared.
+            Those were just not just photos but everything to me, teri baar baar yaad aane par me unhi ko toh dekhta tha.
+            They helped me relive all the moments we had together, now I have nothing left man.🥺
+            This is one of the few remaining photos I secretly had it as my phone ka wallpaper once. 
+            It's my Faviouriteststs...
+            <p> I Love you so much that I wish we never met. This is why I was scared of Falling
+                in love. You bombarded me with your love so much that I lost my mind.
+            </p>
+            
+            <p> Tujhse milke mujhe mere Ghar ke bahar ek Ghar mila tha yaar, mera khudka chotasa ek Ghar.
+                I am in so much pain, ki ab kuch feel hi nai hota. All I have is a lifelong regret.
+                Whatever bhai, Sorry for talking shit, it's your Birthday!!!
+            </p>
+            Aur ha! Actually, iss photo pe click kar tera sabse best photo dikhega, jo mere dil ke bohot
+            kareeb h>>>
+        </div>
+
+        <!-- Clickable Photo -->
+        <div class="photo-container">
+            <a href="hehe.html">
+                <img src="US.jpg" alt="Photo of Us" class="photo">
+            </a>
+        </div>
+
+        <a href="index.html" class="back-button">Back to Home</a>
+    </div>
+</body>
+</html>
