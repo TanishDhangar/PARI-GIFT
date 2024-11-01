@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Love Letter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Parisienne&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Background Styling */
+        body {
+            font-family: 'Parisienne', cursive;
+            background: #fef3e2;
+            background-image: url('https://www.transparenttextures.com/patterns/aged-paper.png');
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #5e3929;
+            text-align: center;
+            overflow: hidden;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* Love Letter Container */
+        .letter-container {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(255, 248, 237, 0.95);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            font-size: 1.4em;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        /* Sparkle Animation */
+        @keyframes sparkle {
+            0% { opacity: 0; transform: translateY(0); }
+            50% { opacity: 1; }
+            100% { opacity: 0; transform: translateY(30px); }
+        }
+
+        /* Sparkles Styling */
+        .sparkles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .sparkle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            animation: sparkle 3s linear infinite;
+        }
+
+        /* Random Sparkle Positions and Animation Delays */
+        .sparkle:nth-child(1) { left: 10%; top: -5%; animation-delay: 0s; }
+        .sparkle:nth-child(2) { left: 30%; top: 15%; animation-delay: 1.5s; }
+        .sparkle:nth-child(3) { left: 50%; top: 25%; animation-delay: 3s; }
+        .sparkle:nth-child(4) { left: 70%; top: 5%; animation-delay: 0.5s; }
+        .sparkle:nth-child(5) { left: 90%; top: 20%; animation-delay: 2s; }
+        .sparkle:nth-child(6) { left: 15%; top: 50%; animation-delay: 1s; }
+        .sparkle:nth-child(7) { left: 40%; top: 70%; animation-delay: 2.5s; }
+        .sparkle:nth-child(8) { left: 60%; top: 60%; animation-delay: 1.2s; }
+        .sparkle:nth-child(9) { left: 80%; top: 75%; animation-delay: 3s; }
+        .sparkle:nth-child(10) { left: 20%; top: 80%; animation-delay: 0.8s; }
+
+        /* Back Button Styling */
+        .back-button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: #c9a9a6;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.2em;
+            box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            animation: fadeInButton 3s forwards;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #b08f8b;
+        }
+
+        /* Fade-in animation for the button */
+        @keyframes fadeInButton {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive Text Sizing */
+        @media (max-width: 600px) {
+            .letter-container {
+                font-size: 1.2em;
+            }
+            .back-button {
+                font-size: 1em;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="letter-container">
+        Pari,<br><br>
+        Itna toh tujhe real life me bhi kabhi naam se nai bulaya jitna yaha bulaya h. 
+        Haashh... Pari qt, wish you a big big Happy Birthday. Thank you for staying by my side.
+        Aur kitna pareshaan karegi bhai mujhe ha? Meri worst side dekhne ke bawajood you still are there
+        for me man. I have to say this, you taught me how to love. 
+        I had the best time of my life with you. Tere saath I am on an another high, koi nasha itna high nai
+        kar sakta mujhe jitna teri aankhon me dubne ke baad hota h. 
+        Thankyou for everything, mere gusse me bhi pyaar hi tha. And always remember, koi rahe na rahe
+        me humesha tere saath rahunga. I miss your gaal so much man....😭ilysm, you literally are the paani 
+        to my puris, peri peri to my fries, blue to my sky, Friends to my Netflix,
+        oxygen for my lungs. I still don't remeber do you
+        like beaches or mountains.. Beaches??😭😭😭
+          <br><br>
+          Yours and forever yours,
+          <p>Tanny,Manny,Panny.</p>
+        
+    </div>
+
+    <!-- Sparkle Animation -->
+    <div class="sparkles">
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+    </div>
+
+    <!-- Back Button -->
+    <a href="Surprise.html" class="back-button">Back to Surprise</a>
+</body>
+</html>
